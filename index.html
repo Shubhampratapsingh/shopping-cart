@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">	
+	<script src="cart.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h2 class="order-summary">&#128722; Order Summary</h2>
+	<h3>ITEMS</h3>
+	<p id="demo" class="text-danger"></p>
+
+<div class="shopping-cart">
+
+  <div class="column-labels">
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Price</label>
+    <label class="product-quantity">Quantity</label>
+    <label class="product-removal">Remove</label>
+    <label class="product-line-price">Total</label>
+  </div>
+<div class="json-product"></div>
+
+  <div class="totals">
+    <div class="totals-item">
+      <label>Subtotal</label>
+      <div class="totals-value" id="cart-subtotal">2760</div>
+    </div>
+    <div class="totals-item">
+      <label>Discount (5%)</label>
+      <div class="totals-value" id="cart-tax">138</div>
+    </div>
+    <div class="totals-item">
+      <label>Shipping</label>
+      <div class="totals-value" id="cart-shipping">15.00</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>Grand Total</label>
+      <div class="totals-value" id="cart-total">2637</div>
+    </div>
+  </div>
+      
+      <button class="checkout btn btn-outline-success">&#x1F6D2; Checkout</button>
+      <button type="button" class="reload btn btn-outline-success">Reload Items</button>
+      <script type="text/javascript"> 
+        $(document).ready(function () { 
+            $("button.reload").click(function () { 
+                location.reload(true); 
+                alert('Reloading Page'); 
+            }); 
+        }); 
+    </script>
+
+</div>
+</body>
+</html>
